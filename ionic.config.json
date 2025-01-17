@@ -1,0 +1,7 @@
+{
+  "name": "edumind",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
