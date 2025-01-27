@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePage } from './home.page';
 
+// Importa el componente de forma dinámica, sin necesidad de agregarlo en `declarations`
 const routes: Routes = [
   {
     path: '',
-    component: HomePage,
+    loadComponent: () => import('./home.page').then((m) => m.HomePage), // Carga el componente de manera dinámica
   }
 ];
 

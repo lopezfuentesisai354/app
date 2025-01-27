@@ -1,0 +1,166 @@
+<!-- 
+<ion-header>
+  <ion-toolbar color="primary">
+   
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Mi Perfil</ion-card-title>
+    </ion-card-header>
+    
+      <img src="assets/avatar.png" alt="Foto de perfil" class="profile-photo">
+      <ion-grid>
+        <!-Componente 1
+        <ion-row>
+          <ion-col>
+            <ion-card class="card-with-shadow">
+              <ion-card-content class="notification">
+                <h4 class="title">Componente 1</h4>
+                <!Aquí va el contenido del componente 1 -
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        
+        <!- Componente 2 -
+        <ion-row>
+          <ion-col>
+            <ion-card class="card-with-shadow">
+              <ion-card-content class="notification">
+                <h4 class="title">Componente 2</h4>
+                <!- Aquí va el contenido del componente 2 --
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        
+        <!-Componente 3 --
+        <ion-row>
+          <ion-col>
+            <ion-card class="card-with-shadow">
+              <ion-card-content class="notification">
+                <h4 class="title">Componente 3</h4>
+                <! Aquí va el contenido del componente 3 -
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        
+        <!- Componente 4 --
+        <ion-row>
+          <ion-col>
+            <ion-card class="card-with-shadow">
+              <ion-card-content class="notification">
+                <h4 class="title">Componente 4</h4>
+                <!- Aquí va el contenido del componente 4 -
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-button expand="block" color="danger" (click)="logout()">Cerrar sesión</ion-button>
+
+  </ion-card>
+</ion-content> -->
+
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <!-- Imagen de Perfil -->
+    <ion-row class="center-row">
+      <ion-col size="12" class="center-content">
+        <div class="profile-image">
+          <ion-icon name="person-circle-outline"></ion-icon>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <!-- Botones de Opciones -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-list>
+          <!-- Información Personal -->
+          <ion-item class="option-button" button>
+            <ion-label>Información personal</ion-label>
+            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+          </ion-item>
+
+          <!-- Información Académica -->
+          <ion-item class="option-button" button>
+            <ion-label>Información académica</ion-label>
+            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+          </ion-item>
+
+          <!-- Configuración -->
+          <ion-item class="option-button" button>
+            <ion-label>Configuración</ion-label>
+            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+          </ion-item>
+
+          <!-- Acerca de -->
+          <ion-item class="option-button" button>
+            <ion-label>Acerca de</ion-label>
+            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <!-- Botón de Cerrar Sesión -->
+    <ion-row class="center-row">
+      <ion-col size="12" class="center-content">
+        <ion-button expand="block" class="logout-button">Cerrar sesión</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Barra de Navegación -->
+  <ion-footer>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button>
+          <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-button>
+          <ion-icon slot="icon-only" name="bar-chart-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-button>
+          <ion-icon slot="icon-only" name="mail-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-button>
+          <ion-icon slot="icon-only" name="tablet-portrait-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>

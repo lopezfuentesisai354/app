@@ -1,0 +1,127 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Formulario Semanal</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card class="custom-card">
+          <ion-card-header>
+            <ion-card-title>Formulario semanal</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list>
+              <!-- Pregunta 1 -->
+              <ion-item>
+                <ion-label>¿Pregunta 1?</ion-label>
+                <ion-radio-group>
+                  <ion-item>
+                    <ion-label>Sí</ion-label>
+                    <ion-radio slot="start" value="yes1"></ion-radio>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>No</ion-label>
+                    <ion-radio slot="start" value="no1"></ion-radio>
+                  </ion-item>
+                </ion-radio-group>
+              </ion-item>
+
+              <!-- Pregunta 2 -->
+              <ion-item>
+                <ion-label>¿Pregunta 2?</ion-label>
+                <ion-radio-group>
+                  <ion-item>
+                    <ion-label>Sí</ion-label>
+                    <ion-radio slot="start" value="yes2"></ion-radio>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>No</ion-label>
+                    <ion-radio slot="start" value="no2"></ion-radio>
+                  </ion-item>
+                </ion-radio-group>
+              </ion-item>
+
+              <!-- Pregunta 3 -->
+              <ion-item>
+                <ion-label>¿Pregunta 3?</ion-label>
+                <ion-radio-group>
+                  <ion-item>
+                    <ion-label>Sí</ion-label>
+                    <ion-radio slot="start" value="yes3"></ion-radio>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>No</ion-label>
+                    <ion-radio slot="start" value="no3"></ion-radio>
+                  </ion-item>
+                </ion-radio-group>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <!-- Botón Enviar -->
+    <ion-row>
+      <ion-col size="12" class="center-button">
+        <ion-button expand="block" class="submit-button" (click)="submitForm()">
+          Enviar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-footer>
+    <ion-toolbar class="footer-toolbar">
+      <ion-buttons class="footer-buttons">
+        <div class="footer-item">
+          <ion-button fill="clear" (click)="navigateTo('estadistica')">
+            <ion-icon slot="icon-only" name="bar-chart-outline"></ion-icon>
+          </ion-button>
+          <p class="footer-text">Estadísticas</p>
+        </div>
+  
+        <div class="footer-item">
+          <ion-button fill="clear" (click)="navigateTo('niveles')">
+            <ion-icon slot="icon-only" name="mail-outline"></ion-icon>
+          </ion-button>
+          <p class="footer-text">Niveles</p>
+        </div>
+  
+        <div class="footer-item">
+          <ion-button fill="clear" (click)="navigateTo('home')">
+            <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+          </ion-button>
+          <p class="footer-text">Inicio</p>
+        </div>
+  
+        <div class="footer-item">
+          <ion-button fill="clear" (click)="navigateTo('vinculacion')">
+            <ion-icon slot="icon-only" name="watch-outline"></ion-icon>
+          </ion-button>
+          <p class="footer-text">Vinculación</p>
+        </div>
+  
+        <div class="footer-item">
+          <ion-button fill="clear" (click)="navigateTo('formulario')">
+            <ion-icon slot="icon-only" name="document-text-outline"></ion-icon>
+          </ion-button>
+          <p class="footer-text">Formulario</p>
+        </div>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>

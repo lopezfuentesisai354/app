@@ -1,0 +1,40 @@
+/* Menú Inferior */
+.footer-toolbar {
+  --background: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Botones distribuidos de manera uniforme en el menú inferior */
+.footer-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly; /* Distribución uniforme */
+}
+
+/* Animación en los botones del menú inferior */
+.footer-buttons ion-button:active {
+  transform: scale(1.1); /* Efecto de escala al presionar el botón */
+  transition: transform 0.2s ease;
+}
+
+/* Íconos en el menú inferior */
+ion-footer ion-icon {
+  color: #4c8df7;
+  font-size: 28px;
+  transition: transform 0.3s ease;
+}
+
+ion-footer ion-icon:hover {
+  transform: scale(1.2); /* Efecto de ampliación al pasar el cursor */
+}
+
+app-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}

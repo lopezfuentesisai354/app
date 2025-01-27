@@ -1,6 +1,6 @@
+/* Estilo general para el contenedor */
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
@@ -8,20 +8,269 @@
   transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+/* Fondo blanco para todo el contenido */
+ion-content {
+  --background: #e5f7f7; /* Fondo blanco */
+  padding: 20px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+/* Estilo para las tarjetas */
+.card-with-shadow {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #ffffff; /* Fondo blanco en tarjetas */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#container a {
-  text-decoration: none;
+.card-with-shadow:hover {
+  transform: scale(1.03); /* Escala ligeramente la tarjeta */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el cursor */
+}
+
+/* Gráfico circular */
+.circular-chart {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 6px solid #4c8df7;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* Fondo blanco para el gráfico circular */
+  transition: transform 0.3s ease;
+}
+
+.circular-chart:hover {
+  transform: scale(1.05); /* Efecto de ampliación al pasar el cursor */
+}
+
+.percentage {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4c8df7;
+}
+
+/* Gráfico de torta */
+.pie-chart {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #f54242 0% 25%,
+    #ffcd42 25% 50%,
+    #4c8df7 50% 100%
+  );
+  background-color: #ffffff; /* Fondo blanco para el gráfico de torta */
+  transition: transform 0.3s ease;
+}
+
+.pie-chart:hover {
+  transform: scale(1.05); /* Efecto de ampliación al pasar el cursor */
+}
+
+/* Estilo para el gráfico de barras */
+.bar-chart-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  height: 150px;
+  background: #f2f8ff; /* Fondo suave para las barras */
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.bar {
+  width: 18%;
+  background-color: #4c8df7;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.bar:hover {
+  transform: translateY(-10px); /* Desplazamiento hacia arriba */
+  background-color: #356ac6; /* Cambio de color al pasar el cursor */
+}
+
+/* Estilo del toggle */
+.toggle-style {
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+}
+
+.toggle-style:active {
+  transform: scale(1.1); /* Aumento al hacer clic en el toggle */
+}
+
+/* Estilo de la notificación */
+.card-notification {
+  background: #4c8df7;
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card-notification:hover {
+  transform: translateX(10px); /* Desplazamiento hacia la derecha al pasar el cursor */
+  background-color: #356ac6; /* Cambio de color al pasar el cursor */
+}
+
+.notification {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+/* Menú Inferior */
+.footer-toolbar {
+  --background: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Botones distribuidos de manera uniforme en el menú inferior */
+.footer-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly; /* Distribución uniforme */
+}
+
+/* Animación en los botones del menú inferior */
+.footer-buttons ion-button:active {
+  transform: scale(1.1); /* Efecto de escala al presionar el botón */
+  transition: transform 0.2s ease;
+}
+
+/* Íconos en el menú inferior */
+ion-footer ion-icon {
+  color: #4c8df7;
+  font-size: 28px;
+  transition: transform 0.3s ease;
+}
+
+ion-footer ion-icon:hover {
+  transform: scale(1.2); /* Efecto de ampliación al pasar el cursor */
+}
+/* Cambiar el color del ion-toolbar a blanco */
+ion-toolbar {
+  --background: #f2f8ff; /* Fondo blanco */
+  --box-shadow: none; /* Elimina la sombra si no la quieres */
+  color: #f2f8ff; /* Color de texto del toolbar */
+}
+// ion-avatar img {
+//   width: 35px; /* Ajusta el tamaño deseado */
+//   height: 35px; /* Mantener proporción cuadrada */
+//   object-fit: cover;
+//   border-right: 15%; /* Asegura que la imagen no se distorsione */
+// }
+/* Centrar la imagen del avatar en el toolbar y alinearla a la derecha */
+ion-toolbar {
+  --background: #e5f7f7; /* Fondo blanco */
+  --box-shadow: none; /* Elimina la sombra si no la quieres */
+  color: #4c8df7; /* Color de texto del toolbar */
+  display: flex; /* Hacer el toolbar un contenedor flex */
+  justify-content: space-between; /* Espacio entre elementos (Título y Avatar) */
+  align-items: center; /* Alinea los elementos verticalmente al centro */
+}
+
+ion-avatar {
+  margin-left: auto; /* Empuja el avatar hacia la derecha */
+  display: flex; /* Asegura que el avatar se comporte como un contenedor flexible */
+  align-items: center; /* Centra el avatar verticalmente */
+}
+
+ion-avatar img {
+  width: 40px; /* Ajusta el tamaño deseado */
+  height: 40px; /* Mantener proporción cuadrada */
+  object-fit: cover; /* Asegura que la imagen no se distorsione */
+}
+h3{
+  margin-left: 3%;
+}
+/* Contenedor general dentro de la tarjeta */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar el contenido dentro del contenedor */
+  justify-content: center;
+  text-align: center;
+}
+
+/* Alineación del título */
+.title {
+  margin-bottom: 10px; /* Espacio entre el título y el gráfico */
+  color: #4c8df7;
+  font-size: 18px;
+}
+
+/* Contenedor para el gráfico circular y el texto adicional */
+.chart-and-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo adicional para el texto debajo del gráfico */
+.additional-text {
+  margin-top: 10px; /* Espacio entre el gráfico y el texto adicional */
+  font-size: 14px;
+  color: #8c8c8c; /* Color de texto más suave */
+}
+
+/* Gráfico circular */
+.circular-chart {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 6px solid #4c8df7;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.percentage {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4c8df7;
+}
+arrow-forward-outline{
+  color: #356ac6;
+}
+
+
+.ion-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-text {
+  font-size: 12px; /* Tamaño pequeño */
+  color: #777; /* Color de texto más suave */
+  margin-top: 4px; /* Espacio entre el botón y el texto */
 }

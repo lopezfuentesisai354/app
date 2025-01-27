@@ -1,0 +1,82 @@
+<ion-app>
+  <!-- Header con fondo degradado -->
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title style="text-align: center;">Dashboard</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Contenido principal con tarjetas y gráficos -->
+  <ion-content>
+    <ion-grid>
+      <ion-row>
+        <!-- Tarjeta para gráfico de Estrés -->
+        <ion-col size="12">
+          <ion-card class="card-with-shadow">
+            <ion-card-header>
+              <ion-card-title>Estrés</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <canvas id="stressChart"></canvas>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <!-- Tarjeta para gráfico de Oxigenación -->
+        <ion-col size="12">
+          <ion-card class="card-with-shadow">
+            <ion-card-header>
+              <ion-card-title>Oxigenación</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <canvas id="oxygenChart"></canvas>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <!-- Botón para generar reporte -->
+    <ion-button expand="block" (click)="generateReport()" class="gradient-button center-button">
+      Generar Reporte
+    </ion-button>
+  </ion-content>
+
+  <!-- Footer con botones -->
+  <ion-footer>
+    <ion-toolbar class="footer-toolbar">
+      <ion-buttons class="footer-buttons">
+        <div class="footer-item">
+          <ion-button fill="clear" (click)="navigateTo('estadistica')">
+            <ion-icon slot="icon-only" name="bar-chart-outline"></ion-icon>
+          </ion-button>
+          <p class="footer-text">Estadísticas</p>
+        </div>
+        <div class="footer-item">
+          <ion-button fill="clear" (click)="navigateTo('niveles')">
+            <ion-icon slot="icon-only" name="mail-outline"></ion-icon>
+          </ion-button>
+          <p class="footer-text">Niveles</p>
+        </div>
+        <div class="footer-item">
+          <ion-button fill="clear" (click)="navigateTo('home')">
+            <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+          </ion-button>
+          <p class="footer-text">Inicio</p>
+        </div>
+        <div class="footer-item">
+          <ion-button fill="clear" (click)="navigateTo('vinculacion')">
+            <ion-icon slot="icon-only" name="watch-outline"></ion-icon>
+          </ion-button>
+          <p class="footer-text">Vinculación</p>
+        </div>
+        <div class="footer-item">
+          <ion-button fill="clear" (click)="navigateTo('formulario')">
+            <ion-icon slot="icon-only" name="document-text-outline"></ion-icon>
+          </ion-button>
+          <p class="footer-text">Formulario</p>
+        </div>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+</ion-app>

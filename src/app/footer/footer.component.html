@@ -1,0 +1,25 @@
+<ion-app>  
+    <ion-router-outlet></ion-router-outlet>
+    <ion-footer>
+      <ion-toolbar class="footer-toolbar">
+        <ion-buttons class="footer-buttons">
+          <ion-button fill="clear" (click)="navigateTo('home')">
+            <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+          </ion-button>
+          <ion-button fill="clear" (click)="navigateTo('estadistica')">
+            <ion-icon slot="icon-only" name="bar-chart-outline"></ion-icon>
+          </ion-button>
+          <ion-button fill="clear" (click)="navigateTo('niveles')">
+            <ion-icon slot="icon-only" name="mail-outline"></ion-icon>
+          </ion-button>
+          <ion-button fill="clear" (click)="navigateTo('vinculacion')">
+            <ion-icon slot="icon-only" name="watch-outline"></ion-icon>
+          </ion-button>
+          <ion-button fill="clear" (click)="navigateTo('formulario')">
+            <ion-icon slot="icon-only" name="document-text-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-footer> 
+  
+</ion-app>

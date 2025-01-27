@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title-center">
+      <ion-icon name="brain" size="large" class="logo-icon"></ion-icon>
+      <div class="title-text">Iniciar Sesión</div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="login-container">
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <ion-item lines="full" class="input-item">
+        <ion-label position="floating" color="primary">Correo Electrónico</ion-label>
+        <ion-input
+          type="email"
+          formControlName="email"
+          required
+          [class.invalid]="!loginForm.controls['email'].valid && loginForm.controls['email'].touched"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item lines="full" class="input-item">
+        <ion-label position="floating" color="primary">Contraseña</ion-label>
+        <ion-input
+          type="password"
+          formControlName="password"
+          required
+          [class.invalid]="!loginForm.controls['password'].valid && loginForm.controls['password'].touched"
+        ></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" type="submit" [disabled]="!loginForm.valid" class="login-button">
+        Iniciar sesión
+      </ion-button>
+    </form>
+
+    <ion-note color="danger" *ngIf="showError">
+      Usuario o contraseña incorrectos.
+    </ion-note>
+  </div>
+</ion-content>

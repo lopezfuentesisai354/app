@@ -1,0 +1,131 @@
+// /* Estilo para el contenedor principal */
+// ion-header {
+//   background-color: #e5f7f7;
+// }
+
+// /* Estilo de las tarjetas */
+// .card-with-shadow {
+//   border-radius: 15px;
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//   background: #ffffff;
+//   transition: transform 0.3s ease, box-shadow 0.3s ease;
+// }
+
+// .card-with-shadow:hover {
+//   transform: scale(1.03);
+//   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+// }
+
+// /* Estilo para los componentes de la tarjeta */
+// .chart-and-text {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .arrow-icon {
+//   color: #356ac6;
+//   font-size: 24px;
+//   margin-left: 10px;
+// }
+
+// .title {
+//   margin-bottom: 10px;
+//   color: #4c8df7;
+//   font-size: 18px;
+// }
+
+// .notification {
+//   background: #4c8df7;
+//   color: white;
+//   border-radius: 15px;
+//   padding: 10px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   transition: transform 0.3s ease;
+// }
+
+// .notification:hover {
+//   transform: translateX(10px);
+//   background-color: #356ac6;
+// }
+
+// .notification ion-icon {
+//   color: white;
+// }
+
+// /* Menú Inferior */
+// .footer-toolbar {
+//   background-color: #ffffff;
+//   border-top: 1px solid #e0e0e0;
+// }
+
+// .footer-buttons {
+//   display: flex;
+//   justify-content: space-evenly;
+//   width: 100%;
+// }
+
+// .footer-buttons ion-button {
+//   --background: transparent;
+//   --color: #4c8df7;
+// }
+
+// .footer-buttons ion-button:hover {
+//   transform: scale(1.1);
+// }
+
+// .footer-buttons ion-icon {
+//   font-size: 28px;
+//   color: #4c8df7;
+// }
+
+// .footer-buttons ion-icon:hover {
+//   transform: scale(1.2);
+// }
+
+ion-toolbar {
+  --background: #007BFF;
+  --color: white;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  background: #e3f2fd;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.profile-image ion-icon {
+  font-size: 4rem;
+  color: #007BFF;
+}
+
+.option-button {
+  --background: #e3f2fd;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logout-button {
+  --background: #007BFF;
+  --color: white;
+  font-weight: bold;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+ion-footer ion-toolbar {
+  --background: #e3f2fd;
+}
+
+ion-footer ion-button {
+  color: #007BFF;
+}
