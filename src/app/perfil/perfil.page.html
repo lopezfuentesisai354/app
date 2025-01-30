@@ -137,30 +137,41 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-
-  <!-- Barra de Navegación -->
-  <ion-footer>
+</ion-content>
+  <ion-footer class="fixed-footer">
     <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-button>
-          <ion-icon slot="icon-only" name="home-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-      <ion-buttons slot="start">
-        <ion-button>
-          <ion-icon slot="icon-only" name="bar-chart-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-      <ion-buttons slot="start">
-        <ion-button>
-          <ion-icon slot="icon-only" name="mail-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-      <ion-buttons slot="start">
-        <ion-button>
-          <ion-icon slot="icon-only" name="tablet-portrait-outline"></ion-icon>
-        </ion-button>
+      <ion-buttons class="footer-buttons">
+        <div class="footer-item">
+          <ion-button fill="clear" (click)="navigateTo('estadistica')">
+            <ion-icon slot="icon-only" name="bar-chart-outline"></ion-icon>
+          </ion-button>
+          <p class="footer-text">Estadísticas</p>
+        </div>
+        <div class="footer-item">
+          <ion-button fill="clear" (click)="navigateTo('niveles')">
+            <ion-icon slot="icon-only" name="mail-outline"></ion-icon>
+          </ion-button>
+          <p class="footer-text">Niveles</p>
+        </div>
+        <div class="footer-item">
+          <ion-button fill="clear" (click)="navigateTo('home')">
+            <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+          </ion-button>
+          <p class="footer-text">Inicio</p>
+        </div>
+        <div class="footer-item">
+          <ion-button fill="clear" (click)="navigateTo('vinculacion')">
+            <ion-icon slot="icon-only" name="watch-outline"></ion-icon>
+          </ion-button>
+          <p class="footer-text">Vinculación</p>
+        </div>
+        <div class="footer-item">
+          <ion-button fill="clear" (click)="navigateTo('formulario')">
+            <ion-icon slot="icon-only" name="document-text-outline"></ion-icon>
+          </ion-button>
+          <p class="footer-text">Formulario</p>
+        </div>
       </ion-buttons>
     </ion-toolbar>
   </ion-footer>
-</ion-content>
+

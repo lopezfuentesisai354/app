@@ -23,6 +23,11 @@ export class PerfilPage implements OnInit {
     console.log('Cerrando sesión');
     this.router.navigateByUrl('/home', { replaceUrl: true }); // Redirigir a la página principal
   }
+
+  navigateTo(page: string) {
+    this.router.navigate([`/${page}`]);
+  }
+
   }
 
 
