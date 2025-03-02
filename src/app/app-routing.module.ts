@@ -5,7 +5,7 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: '/login',  // Redirige a la página de login por defecto
+    redirectTo: '/bienvenida',  // Redirige a la página de login por defecto
     pathMatch: 'full'       // Asegura que se redirija sólo cuando no haya otro segmento de ruta
   },
   {
@@ -36,6 +36,16 @@ const routes: Routes = [
     path: 'vinculacion',
     loadChildren: () => import('./vinculacion/vinculacion.module').then( m => m.VinculacionPageModule)
   },
+  {
+    path: 'bienvenida',
+    loadChildren: () => import('./bienvenida/bienvenida.module').then( m => m.BienvenidaPageModule)
+  },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
+  },
+
+
 ];
 
 @NgModule({

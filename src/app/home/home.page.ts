@@ -7,7 +7,7 @@ import { FooterComponent } from "../footer/footer.component";
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [IonicModule, ],
+  imports: [IonicModule,],
   standalone: true,
 })
 export class HomePage implements OnInit{

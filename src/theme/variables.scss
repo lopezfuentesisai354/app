@@ -1,2 +1,77 @@
-// For information on how to create your own theme, please see:
-// http://ionicframework.com/docs/theming/
+/* Definición de colores personalizados para el tema */
+:root {
+  /* Colores principales */
+  --ion-color-resalte: #006b7e;
+  --ion-color-resalte-rgb: 0, 107, 126;
+  --ion-color-resalte-contrast: #ffffff;
+  --ion-color-resalte-contrast-rgb: 255, 255, 255;
+  --ion-color-resalte-shade: #005e6f;
+  --ion-color-resalte-tint: #1a7a8b;
+
+  /* Colores oscuros */
+  --ion-color-dark: #222428;  // Color oscuro personalizado
+  --ion-color-dark-rgb: 34, 36, 40;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #1f2023;
+  --ion-color-dark-tint: #44474a;
+
+  /* Color Secundario */
+  --ion-color-secondary: #ff8c00;  /* Color secundario */
+  --ion-color-secondary-rgb: 255, 140, 0;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #e57d00;
+  --ion-color-secondary-tint: #ff9f33;
+
+  /* Colores claros */
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244, 245, 248;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #d1d2d6;
+  --ion-color-white: #ffffff;
+}
+
+/* Usando las variables en el diseño */
+body {
+  /* Aplicando el color resaltado a un botón de ejemplo */
+  .ion-color-resalte {
+    --ion-color-base: var(--ion-color-resalte);
+    --ion-color-base-rgb: var(--ion-color-resalte-rgb);
+    --ion-color-contrast: var(--ion-color-resalte-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-resalte-contrast-rgb);
+    --ion-color-shade: var(--ion-color-resalte-shade);
+    --ion-color-tint: var(--ion-color-resalte-tint);
+  }
+
+  /* Estilos para usar el color oscuro */
+  .ion-color-dark {
+    --ion-color-base: var(--ion-color-dark);
+    --ion-color-base-rgb: var(--ion-color-dark-rgb);
+    --ion-color-contrast: var(--ion-color-dark-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-dark-contrast-rgb);
+    --ion-color-shade: var(--ion-color-dark-shade);
+    --ion-color-tint: var(--ion-color-dark-tint);
+  }
+
+  /* Estilos para usar el color claro */
+  .ion-color-light {
+    --ion-color-base: var(--ion-color-light);
+    --ion-color-base-rgb: var(--ion-color-light-rgb);
+    --ion-color-contrast: var(--ion-color-light-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-light-contrast-rgb);
+    --ion-color-shade: var(--ion-color-light-shade);
+    --ion-color-white: var(--ion-color-white);
+  }
+
+  /* Estilos para usar el color secundario */
+  .ion-color-secondary {
+    --ion-color-base: var(--ion-color-secondary);
+    --ion-color-base-rgb: var(--ion-color-secondary-rgb);
+    --ion-color-contrast: var(--ion-color-secondary-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-secondary-contrast-rgb);
+    --ion-color-shade: var(--ion-color-secondary-shade);
+    --ion-color-tint: var(--ion-color-secondary-tint);
+  }
+}

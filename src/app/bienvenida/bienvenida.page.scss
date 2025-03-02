@@ -1,0 +1,126 @@
+ion-content {
+  --background: var(--ion-color-dark) url('../../assets/img-edu-mind/fondo-welcome.svg') no-repeat center center/cover;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px; /* Agregado padding horizontal */
+}
+
+ion-list {
+  width: 100%;
+  max-width: 500px; /* Añadir un límite de ancho para una mejor presentación */
+  background: transparent;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  
+  /* Añadir un margen izquierdo y derecho igual para centrar */
+  margin: 0 10px; /* Esto agrega márgenes igualados en ambos lados */
+  
+  ion-list-header {
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    margin-top: 300px; /* Ajustado a un margen más pequeño */
+
+    ion-label {
+      font-weight: bold;
+      font-size: 2rem; /* Tamaño ajustado */
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin-top: 15px;
+  }
+}
+
+.buttonLogin {
+  width: 80%;
+  margin-top: 90px;
+  max-width: 320px;
+  height: 2.5rem;
+  margin-bottom: 10px;
+  padding: 0 2rem;
+  border-radius: 1rem;
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease;
+
+  &:hover::before {
+    transform: scaleX(1);
+  }
+
+  .button-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(82.3deg, rgb(93, 84, 255) 10.8%, rgb(87, 176, 255) 94.3%);
+    transition: all 0.475s;
+  }
+
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+.button.google {
+  width: 80%;
+  max-width: 320px;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  align-items: center;
+  border-radius: 1rem;
+  border: 1px solid rgba(50, 50, 80, 0.25);
+  gap: 0.75rem;
+  background-color: rgb(50, 50, 80);
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.6s ease;
+
+  svg {
+    height: 24px;
+    width: 24px;
+    fill: #fff;
+    margin-right: 0.5rem;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+    background-color: rgb(5, 5, 246);
+    box-shadow: 0 2px 4px rgba(90, 90, 120, 0.1);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 40, 0.3);
+  }
+
+  &:active {
+    transform: scale(0.98);
+    opacity: 0.8;
+  }
+}

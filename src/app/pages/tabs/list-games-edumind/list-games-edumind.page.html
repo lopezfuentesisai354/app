@@ -1,0 +1,47 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="navigateTo('tabs')">
+        <ion-icon color="resalte" slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="main">
+    <div class="loader" (click)="navigateTo('/tabs/tetris-edumind')">
+      <div class="song">
+        <p class="name">TETRIS</p>
+        <p class="artist">Frank Sinatra</p>
+      </div>
+      <div class="albumcover"></div>
+      <div class="play"></div>
+    </div>
+    <div class="loader">
+      <div class="song">
+        <p class="name">Lemon Tree</p>
+        <p class="artist">Fools Garden</p>
+      </div>
+      <div class="albumcover"></div>
+      <div class="play"></div>
+    </div>
+    <div class="loader">
+      <div class="song">
+        <p class="name">Lemon Tree</p>
+        <p class="artist">Fools Garden</p>
+      </div>
+      <div class="albumcover"></div>
+      <div class="play"></div>
+    </div>
+    <div class="loader">
+      <div class="song">
+        <p class="name">Lemon Tree</p>
+        <p class="artist">Fools Garden</p>
+      </div>
+      <div class="albumcover"></div>
+      <div class="play"></div>
+    </div>
+    
+  </div>
+</ion-content>

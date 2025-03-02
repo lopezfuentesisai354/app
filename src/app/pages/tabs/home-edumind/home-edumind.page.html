@@ -1,0 +1,120 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button class="bordered" fill="solid" color="white">
+        <ion-icon color="resalte" name="notifications"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+
+  <ion-item lines="none">
+    <ion-avatar slot="start">
+      <img src="../../../../assets/img-edu-mind/perfil.svg" alt="">
+    </ion-avatar>
+    <ion-label>
+      <p>Hola, Bienvenido</p>
+      <h3>Christian Uscanga</h3>
+    </ion-label>
+  </ion-item>
+
+</ion-header>
+
+<ion-content>
+  <div class="slides ion-margin-bottom">
+    <swiper-container>
+      <swiper-slide>
+        <ion-card>
+          <ion-card-header>
+            <div class="main">
+              <img src="../../../../assets/img-edu-mind/Respi-edumind.svg" alt="">
+            </div>
+          </ion-card-header>
+          <ion-card-content class="ion-text-left">
+            <ion-card-title class="ion-margin-bottom text-1">Respirar si ayuda</ion-card-title>
+            <ion-card-subtitle class="ion-text-right">Cumple tu meta</ion-card-subtitle>
+            <ion-progress-bar value="0.2" color="resalte"></ion-progress-bar>
+          </ion-card-content>
+        </ion-card>
+      </swiper-slide>
+      <swiper-slide>
+        <ion-card>
+          <ion-card-header>
+            <div class="main">
+              <img src="../../../../assets/img-edu-mind/enojo-edumind.svg" alt="">
+            </div>
+          </ion-card-header>
+          <ion-card-content class="ion-text-left">
+            <ion-card-title class="ion-margin-bottom">No todo es tu culpa</ion-card-title>
+            <ion-card-subtitle class="ion-text-right">Tu puedes</ion-card-subtitle>
+            <ion-progress-bar value="0.5" color="resalte"></ion-progress-bar>
+          </ion-card-content>
+        </ion-card>
+      </swiper-slide>
+      <swiper-slide>
+        <ion-card>
+          <ion-card-header>
+            <div class="main">
+              <img src="../../../../assets/img-edu-mind/deporte-edumind.svg" alt="">
+            </div>
+          </ion-card-header>
+          <ion-card-content class="ion-text-left">
+            <ion-card-title class="ion-margin-bottom">Actividad Fisica</ion-card-title>
+            <ion-card-subtitle class="ion-text-right">Ya falta poco</ion-card-subtitle>
+            <ion-progress-bar value="0.8" color="resalte"></ion-progress-bar>
+          </ion-card-content>
+        </ion-card>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+  <div class="container">
+    <h2>Mis Actividades</h2>
+    <ion-item lines="none">
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+          <ion-col size="3">
+            <ion-button fill="clear">
+              <ion-icon name="game-controller" style="color: var(--ion-color-white);"></ion-icon>
+            </ion-button>            
+          </ion-col>
+          <ion-col size="7">
+            <ion-label>
+              <h4>Juegos</h4>
+              <h6>Sopa de letras</h6>
+            </ion-label>
+          </ion-col>
+          <ion-col size="2">
+            <ion-button  fill="clear">
+              <ion-icon name="ellipsis-vertical" style="color: var(--ion-color-white);"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+          <ion-col size="3">
+            <ion-button fill="clear">
+              <ion-icon name="musical-notes" style="color: var(--ion-color-white);"></ion-icon>
+            </ion-button>            
+          </ion-col>
+          <ion-col size="7">
+            <ion-label>
+              <h4>Musica</h4>
+              <h6>Ruido Blanco</h6>
+            </ion-label>
+          </ion-col>
+          <ion-col size="2">
+            <ion-button  fill="clear">
+              <ion-icon name="ellipsis-vertical" style="color: var(--ion-color-white);"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </div>
+</ion-content>

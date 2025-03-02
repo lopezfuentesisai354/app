@@ -1,0 +1,38 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button class="bordered" fill="solid" color="white">
+        <ion-icon color="resalte" name="notifications"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+
+  <ion-item lines="none">
+    <ion-avatar slot="start">
+      <img src="../../../../assets/img-edu-mind/perfil.svg" alt="">
+    </ion-avatar>
+    <ion-label>
+      <p>Hola, Bienvenido</p>
+      <h3>Christian Uscanga</h3>
+    </ion-label>
+  </ion-item>
+
+</ion-header>
+
+<ion-content>
+  <calendar
+    [eventSource]="allEvents"
+    [calendarMode]="calendar.mode"
+    startHours="0"
+    noEventLabel="No hay eventos"
+    endHours="23"
+    step="30"
+    startingDayWeek="1"
+    [currentDate]="calendar.currentDate"
+    (onTitleChanged)="onViewTitleChanged($event)">
+  </calendar>
+</ion-content>

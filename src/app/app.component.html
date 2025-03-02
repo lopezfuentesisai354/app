@@ -1,6 +1,35 @@
 <ion-app>
-  
-    <ion-router-outlet></ion-router-outlet>
-
-  
+    <ion-menu menuId="main-menu" contentId="main">
+        <ion-content>
+            <div class="menu-header-bg"></div>
+            <div class="header-content">
+                <img src="../assets/img-edu-mind/perfil.svg" alt="">
+                <ion-label>
+                    <h2>Christian Uscanga Parra</h2>
+                    <p>Ing. Developer</p>
+                </ion-label>
+            </div>
+            <ion-list class="menu-items" lines="none">
+                <ion-item routerLink="/perfil">
+                    <ion-icon name="settings-outline"></ion-icon>Perfil
+                </ion-item>
+                <ion-item routerLink="/tabs/list-games-edumind">
+                    <ion-icon name="game-controller"></ion-icon>Juegos
+                </ion-item>
+                <ion-item routerLink="/tabs/musica-edumind">
+                    <ion-icon name="musical-notes"></ion-icon>Musica
+                </ion-item>
+                <ion-item routerLink="/vinculacion">
+                    <ion-icon name="watch"></ion-icon>Vinculación
+                </ion-item>
+                <ion-item routerLink="/niveles">
+                    <ion-icon name="reader"></ion-icon>Reportes
+                </ion-item>
+                <ion-item class="btn-exit">
+                    <ion-icon name="exit"></ion-icon>Cerrar Session
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main"></ion-router-outlet>  
 </ion-app>

@@ -1,56 +1,63 @@
-.login-container {
-  --background: #ffffff;
-
-  .header {
-    text-align: center;
-    margin-top: 40px;
-
-    .welcome-text {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #333;
-    }
-
-    .subtext {
-      font-size: 1rem;
-      color: #666;
-      margin-top: 5px;
-    }
-  }
-
-  .image-container {
-    display: flex;
+.bg{
+ height: 50%;
+ width: 535px;
+ background: var(--ion-color-dark) url('../../assets/img-edu-mind/fondo-login-edu-mind.svg') no-repeat center center/cover;
+ border-radius: 0 0 45% 45%;
+ margin-left: -20vw;
+ position: relative;
+ justify-content: center;
+}
+ion-fab{
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
 
-    img {
-      width: 150px;
-      height: auto;
-      border-radius: 15px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    ion-icon{
+        font-size: 2.5rem;
     }
-  }
-
-  .input-container {
-    margin: 10px 0;
-    --background: #f9f9f9;
-    --border-radius: 12px;
-    --padding-start: 12px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
-
-    ion-label {
-      color: #007bff;
-      font-weight: bold;
-    }
-  }
-
-  .login-button {
-    --background: #007bff;
-    --color: white;
-    border-radius: 25px;
-    font-weight: bold;
-    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.4);
-    margin-top: 20px;
-  }
 }
+ion-list{
+    
+    ion-list-header{
+        margin-top: 20px;
+        font-weight: 1000;
+        font-size: 1.5rem;
+    }
+    ion-item{
+       
+    }
+    p {
+        font-size: 0.8rem;
+        padding-left: 5vw;
+        color: gray;
+    }
+}
+
+
+
+.inputForm {
+    border: 1.5px solid #ecedec;
+    border-radius: 10em;
+    height: 50px;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    transition: 0.2s ease-in-out;
+    background-color: white;
+  }
+  
+  .input {
+    margin-left: 10px;
+    border-radius: 10rem;
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .input:focus {
+    outline: none;
+  }
+  
+  .inputForm:focus-within {
+    border: 1.5px solid #006b7e;
+  }

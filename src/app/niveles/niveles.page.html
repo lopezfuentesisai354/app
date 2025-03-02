@@ -1,86 +1,58 @@
-
 <ion-app>
+  <ion-header [translucent]="true" class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button (click)="navigateTo('tabs')">
+          <ion-icon color="resalte" slot="icon-only" name="arrow-back-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title color="resalte">Reporte General</ion-title>
+      <ion-buttons slot="end">
+        <ion-button class="bordered" fill="solid" color="white">
+          <ion-icon color="resalte" name="notifications"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
   <ion-content>
-    <ion-grid class="main-grid">
-      <!-- Nivel de Estrés -->
+    <ion-grid>
       <ion-row>
+        <!-- Tarjeta para gráfico de Estrés -->
         <ion-col size="12">
-          <ion-card class="custom-card">
+          <ion-card class="card-with-shadow">
             <ion-card-header>
-              <ion-card-title>Nivel de Estrés - Medio Bajo</ion-card-title>
+              <ion-card-title></ion-card-title>
             </ion-card-header>
             <ion-card-content>
-              <div class="video-container">
-                <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
-              </div>
-            </ion-card-content>
+              <ion-row>
+                <ion-col size="12">
+                  <h2 class="section-title">Recomendaciones</h2>
+                  <ion-list>
+                    <!-- Ejercicio de respiración -->
+                    <ion-item class="recommendation-item" button>
+                      <ion-label>Ejercicio de respiración</ion-label>
+                      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+                    </ion-item>
+        
+                    <!-- Ejercicio físico -->
+                    <ion-item class="recommendation-item" button>
+                      <ion-label>Ejercicio físico</ion-label>
+                      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+                    </ion-item>
+        
+                    <!-- Ejercicio avanzado -->
+                    <ion-item class="recommendation-item" button>
+                      <ion-label>Ejercicio avanzado</ion-label>
+                      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+                    </ion-item>
+                  </ion-list>
+                </ion-col>
+              </ion-row>            </ion-card-content>
           </ion-card>
-        </ion-col>
-      </ion-row>
-  
-      <!-- Recomendaciones -->
-      <ion-row>
-        <ion-col size="12">
-          <h2 class="section-title">Recomendaciones</h2>
-          <ion-list>
-            <!-- Ejercicio de respiración -->
-            <ion-item class="recommendation-item" button>
-              <ion-label>Ejercicio de respiración</ion-label>
-              <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-            </ion-item>
-  
-            <!-- Ejercicio físico -->
-            <ion-item class="recommendation-item" button>
-              <ion-label>Ejercicio físico</ion-label>
-              <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-            </ion-item>
-  
-            <!-- Ejercicio avanzado -->
-            <ion-item class="recommendation-item" button>
-              <ion-label>Ejercicio avanzado</ion-label>
-              <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-            </ion-item>
-          </ion-list>
         </ion-col>
       </ion-row>
     </ion-grid>
   </ion-content>
   
-  <ion-footer class="fixed-footer">
-    <ion-toolbar>
-      <ion-buttons class="footer-buttons">
-        <div class="footer-item">
-          <ion-button fill="clear" (click)="navigateTo('estadistica')">
-            <ion-icon slot="icon-only" name="bar-chart-outline"></ion-icon>
-          </ion-button>
-          <p class="footer-text">Estadísticas</p>
-        </div>
-        <div class="footer-item">
-          <ion-button fill="clear" (click)="navigateTo('niveles')">
-            <ion-icon slot="icon-only" name="mail-outline"></ion-icon>
-          </ion-button>
-          <p class="footer-text">Niveles</p>
-        </div>
-        <div class="footer-item">
-          <ion-button fill="clear" (click)="navigateTo('home')">
-            <ion-icon slot="icon-only" name="home-outline"></ion-icon>
-          </ion-button>
-          <p class="footer-text">Inicio</p>
-        </div>
-        <div class="footer-item">
-          <ion-button fill="clear" (click)="navigateTo('vinculacion')">
-            <ion-icon slot="icon-only" name="watch-outline"></ion-icon>
-          </ion-button>
-          <p class="footer-text">Vinculación</p>
-        </div>
-        <div class="footer-item">
-          <ion-button fill="clear" (click)="navigateTo('formulario')">
-            <ion-icon slot="icon-only" name="document-text-outline"></ion-icon>
-          </ion-button>
-          <p class="footer-text">Formulario</p>
-        </div>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-footer>
-  </ion-app>
-  
+</ion-app>

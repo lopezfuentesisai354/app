@@ -1,3 +1,4 @@
+import { NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
@@ -7,10 +8,23 @@ import { IonicModule } from '@ionic/angular';
   templateUrl: './perfil.page.html',
   styleUrls: ['./perfil.page.scss'],
   standalone: true,
-  imports:[IonicModule]
+  imports:[IonicModule, NgIf]
 })
 export class PerfilPage implements OnInit {
   ngOnInit(): void {}
+
+  imageSrc: string | ArrayBuffer | null = null; // Variable para almacenar la imagen
+
+  onImageSelect(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.imageSrc = reader.result; // Asignamos la URL de la imagen
+      };
+      reader.readAsDataURL(file); // Leemos el archivo como una URL de datos
+    }
+  }
 
 
   constructor(private router: Router) {}

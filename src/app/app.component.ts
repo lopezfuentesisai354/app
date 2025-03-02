@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { register } from 'swiper/element/bundle';
+
+register();
+
 
 @Component({
   selector: 'app-root',
@@ -8,4 +12,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   constructor() {}
+
+  slidesOptions = {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: true,
+    pagination: { clickable: true },
+  };
 }

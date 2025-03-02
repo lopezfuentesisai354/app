@@ -26,6 +26,10 @@ export class LoginPage implements OnInit {
 
   ngOnInit(): void {}
 
+navigateTo(page: string) {
+  this.router.navigate([`/${page}`]);
+}
+
   onLogin() {
     const { email, password } = this.loginForm.value;
 
@@ -33,7 +37,7 @@ export class LoginPage implements OnInit {
     if (email === 'test@example.com' && password === 'password123') {
       this.showError = false;
       // Redirigir o hacer algo después de login exitoso
-      this.router.navigate(['/home']); // Ejemplo de navegación a otra página
+      this.router.navigate(['/tabs/home-edumind']); // Ejemplo de navegación a otra página
     } else {
       this.showError = true;
     }

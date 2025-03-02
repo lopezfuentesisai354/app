@@ -1,15 +1,15 @@
 <ion-app>
   <ion-header [translucent]="true">
-    <ion-toolbar color="">
-      <ion-title style="text-align: center;">Bienvenido usuario</ion-title>
-      <ion-buttons slot="end">
-        <ion-avatar (click)="navigateToProfile()">
-          <img src="assets/avatar.png" alt="avatar" />
-        </ion-avatar>
+    <ion-toolbar>
+      <ion-title>
+        HOME
+      </ion-title>
+      <ion-buttons slot="start">
+          <ion-menu-button menu="main-menu"></ion-menu-button>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
-
+  
   <ion-content>
     <ion-grid>
       <!-- Tarjetas principales -->

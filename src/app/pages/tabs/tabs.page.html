@@ -1,0 +1,16 @@
+<ion-tabs #tabs (ionTabsDidChange)="setCurrentTab">
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home-edumind">
+      <ion-icon [name]="selectedTab == 'home-edumind' ? 'home-edumind' : 'home-outline'"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="formulario-edumind">
+      <ion-icon [name]="selectedTab == 'formulario-edumind' ? 'formulario-edumind' : 'clipboard-outline'"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="estadisticas-edumind">
+      <ion-icon [name]="selectedTab == 'estadisticas-edumind' ? 'estadisticas-edumind' : 'stats-chart-outline'"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="calendario-edumind">
+      <ion-icon [name]="selectedTab === '' ? '' : 'calendar-outline'"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

@@ -1,177 +1,69 @@
-<!-- 
-<ion-header>
-  <ion-toolbar color="primary">
-   
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button (click)="goBack()">
-        <ion-icon name="arrow-back-outline"></ion-icon>
+      <ion-button (click)="navigateTo('tabs')">
+        <ion-icon color="resalte" slot="icon-only" name="arrow-back-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>Perfil</ion-title>
+    <ion-title>Configuracion de usuario</ion-title>
+    <ion-buttons slot="end">
+      <ion-button class="bordered" fill="solid" color="white">
+        <ion-icon color="resalte" name="notifications"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Mi Perfil</ion-card-title>
-    </ion-card-header>
-    
-      <img src="assets/avatar.png" alt="Foto de perfil" class="profile-photo">
-      <ion-grid>
-        <!-Componente 1
-        <ion-row>
-          <ion-col>
-            <ion-card class="card-with-shadow">
-              <ion-card-content class="notification">
-                <h4 class="title">Componente 1</h4>
-                <!Aquí va el contenido del componente 1 -
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </ion-card-content>
-            </ion-card>
-          </ion-col>
-        </ion-row>
-        
-        <!- Componente 2 -
-        <ion-row>
-          <ion-col>
-            <ion-card class="card-with-shadow">
-              <ion-card-content class="notification">
-                <h4 class="title">Componente 2</h4>
-                <!- Aquí va el contenido del componente 2 --
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </ion-card-content>
-            </ion-card>
-          </ion-col>
-        </ion-row>
-        
-        <!-Componente 3 --
-        <ion-row>
-          <ion-col>
-            <ion-card class="card-with-shadow">
-              <ion-card-content class="notification">
-                <h4 class="title">Componente 3</h4>
-                <! Aquí va el contenido del componente 3 -
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </ion-card-content>
-            </ion-card>
-          </ion-col>
-        </ion-row>
-        
-        <!- Componente 4 --
-        <ion-row>
-          <ion-col>
-            <ion-card class="card-with-shadow">
-              <ion-card-content class="notification">
-                <h4 class="title">Componente 4</h4>
-                <!- Aquí va el contenido del componente 4 -
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </ion-card-content>
-            </ion-card>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-      <ion-button expand="block" color="danger" (click)="logout()">Cerrar sesión</ion-button>
-
-  </ion-card>
-</ion-content> -->
-
-
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-button>
-        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-title>Perfil</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  <ion-grid>
-    <!-- Imagen de Perfil -->
-    <ion-row class="center-row">
-      <ion-col size="12" class="center-content">
-        <div class="profile-image">
-          <ion-icon name="person-circle-outline"></ion-icon>
-        </div>
-      </ion-col>
-    </ion-row>
-
-    <!-- Botones de Opciones -->
-    <ion-row>
-      <ion-col size="12">
-        <ion-list>
-          <!-- Información Personal -->
-          <ion-item class="option-button" button>
-            <ion-label>Información personal</ion-label>
-            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-          </ion-item>
-
-          <!-- Información Académica -->
-          <ion-item class="option-button" button>
-            <ion-label>Información académica</ion-label>
-            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-          </ion-item>
-
-          <!-- Configuración -->
-          <ion-item class="option-button" button>
-            <ion-label>Configuración</ion-label>
-            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-          </ion-item>
-
-          <!-- Acerca de -->
-          <ion-item class="option-button" button>
-            <ion-label>Acerca de</ion-label>
-            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-          </ion-item>
-        </ion-list>
-      </ion-col>
-    </ion-row>
-
-    <!-- Botón de Cerrar Sesión -->
-    <ion-row class="center-row">
-      <ion-col size="12" class="center-content">
-        <ion-button expand="block" class="logout-button">Cerrar sesión</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+<ion-content mode="ios" [fullscreen]="true">
+  <div class="login-setction ion-padding">
+    <div class="heading ion-padding">
+      <div class="form-input">
+        <label for="image-upload" class="image-upload-label">
+          <input type="file" id="image-upload" accept="image/*" />
+          <ion-icon name="camera-outline" class="image-upload-icon"></ion-icon>
+          <img *ngIf="imageSrc" [src]="imageSrc" alt="Imagen seleccionada" class="selected-image"/>
+        </label>
+      </div>
+    </div>
+    <div class="login-form ion-padding">
+      <div class="form-input">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">Nombre Completo</ion-label>
+          <ion-input type="text"></ion-input> <!-- Vinculado a nombreCompleto -->
+        </ion-item>
+      </div>
+      <div class="form-input">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">Nombre de Escuela</ion-label>
+          <ion-input type="text"></ion-input> <!-- Vinculado a nombreCompleto -->
+        </ion-item>
+      </div>
+      <div class="form-input">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">Carrera</ion-label>
+          <ion-input type="text"></ion-input> <!-- Vinculado a nombreCompleto -->
+        </ion-item>
+      </div>
+      <div class="form-input">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">Ciudad</ion-label>
+          <ion-input type="text"></ion-input> <!-- Vinculado a nombreCompleto -->
+        </ion-item>
+      </div>
+      <div class="form-input">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">Edad</ion-label>
+          <ion-input type="text"></ion-input> <!-- Vinculado a nombreCompleto -->
+        </ion-item>
+      </div>
+    </div>
+    <div class="action-button ion-padding">
+      <ion-button  expand="block" color="resalte" >Guardar Cambios</ion-button><br>
+    </div>
+  </div>
 </ion-content>
-  <ion-footer class="fixed-footer">
-    <ion-toolbar>
-      <ion-buttons class="footer-buttons">
-        <div class="footer-item">
-          <ion-button fill="clear" (click)="navigateTo('estadistica')">
-            <ion-icon slot="icon-only" name="bar-chart-outline"></ion-icon>
-          </ion-button>
-          <p class="footer-text">Estadísticas</p>
-        </div>
-        <div class="footer-item">
-          <ion-button fill="clear" (click)="navigateTo('niveles')">
-            <ion-icon slot="icon-only" name="mail-outline"></ion-icon>
-          </ion-button>
-          <p class="footer-text">Niveles</p>
-        </div>
-        <div class="footer-item">
-          <ion-button fill="clear" (click)="navigateTo('home')">
-            <ion-icon slot="icon-only" name="home-outline"></ion-icon>
-          </ion-button>
-          <p class="footer-text">Inicio</p>
-        </div>
-        <div class="footer-item">
-          <ion-button fill="clear" (click)="navigateTo('vinculacion')">
-            <ion-icon slot="icon-only" name="watch-outline"></ion-icon>
-          </ion-button>
-          <p class="footer-text">Vinculación</p>
-        </div>
-        <div class="footer-item">
-          <ion-button fill="clear" (click)="navigateTo('formulario')">
-            <ion-icon slot="icon-only" name="document-text-outline"></ion-icon>
-          </ion-button>
-          <p class="footer-text">Formulario</p>
-        </div>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-footer>
-
